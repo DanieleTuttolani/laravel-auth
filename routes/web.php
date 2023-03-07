@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 
 
 /*
@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::middleware('auth')->prefix('admin/projects')->group(function(){
-    Route::get('/index', [ProjectController::class , 'index'])->name('projects.index');
+    Route::get('/index', [AdminProjectController::class , 'index'])->name('projects.index');
 
 });
     

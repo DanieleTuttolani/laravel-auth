@@ -8,8 +8,8 @@ use App\Models\Project;
 class ProjectController extends Controller
 {
     public function index(){
-        $new_proj = Project::all();
+        $projects = Project::all();
 
-        return view('admin.projects.index', compact('new_proj'));
+        return view('admin.projects.index', compact('projects'));
     }
 }
