@@ -13,7 +13,7 @@
                   <label for="input-title" class="col-form-label">Titolo</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="input-title" class="form-control" value="{{$project->title}}" aria-describedby="passwordHelpInline">
+                  <input type="text" id="title" name="title" class="form-control" value="{{$project->title}}" aria-describedby="passwordHelpInline">
                 </div>
               </div>
               {{-- descrzione --}}
@@ -22,7 +22,7 @@
                   <label for="input-title" class="col-form-label">descrizione</label>
                 </div>
                 <div class="col">
-                  <textarea type="text" id="input-title" class="form-control"aria-describedby="passwordHelpInline">{{$project->description}}</textarea>
+                  <textarea type="text" id="description" name="description" class="form-control"aria-describedby="passwordHelpInline">{{$project->description}}</textarea>
                 </div>
               </div>
               {{-- link git --}}
@@ -31,7 +31,7 @@
                   <label for="input-title" class="col-form-label">Link Github</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="input-title" class="form-control" value="{{$project->proj_link}}" aria-describedby="passwordHelpInline">
+                  <input type="text" id="proj_link" name="proj_link" class="form-control" value="{{$project->proj_link}}" aria-describedby="passwordHelpInline">
                 </div>
               </div>
               {{--img  --}}
@@ -40,7 +40,7 @@
                   <label for="input-title" class="col-form-label">Url immagini</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="input-title" class="form-control" value="{{$project->img}}" aria-describedby="passwordHelpInline">
+                  <input type="text" id="img" name="img" class="form-control" value="{{$project->img}}" aria-describedby="passwordHelpInline">
                 </div>
               </div>
               {{-- collab --}}
@@ -49,7 +49,7 @@
                   <label for="input-title" class="col-form-label">Collaboratori</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="input-title" class="form-control" value="{{$project->collab}}" aria-describedby="passwordHelpInline">
+                  <input type="text" id="collab" name="collab" class="form-control" value="{{$project->collab}}" aria-describedby="passwordHelpInline">
                 </div>
               </div>
 
