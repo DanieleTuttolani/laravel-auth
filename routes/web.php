@@ -20,9 +20,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::middleware('auth')->prefix('admin/projects')->group(function(){
-    Route::get('/index', [AdminProjectController::class , 'index'])->name('projects.index');
-    Route::get('/show/{project}', [AdminProjectController::class , 'show'])->name('projects.show');
+Route::middleware('auth')->prefix('admin/projects')->name('admin.projects.')->group(function(){
+    Route::get('/index', [AdminProjectController::class , 'index'])->name('index');
+    Route::get('/show/{project}', [AdminProjectController::class , 'show'])->name('show');
 
 });
     
