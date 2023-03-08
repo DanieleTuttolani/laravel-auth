@@ -4,7 +4,7 @@
 <h1>Modifica</h1>
 <div class="my-container container">
     <div class="">
-        <form action="{{route('admin.projects.update' , $project->id)}}" method="post">
+        <form action="{{route('admin.projects.update' , $project->id)}}" method="POST">
             @method('PUT')
             @csrf
             {{-- title --}}

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-
+    <a href="{{route('admin.projects.create')}}" class="btn btn-primary"> crea progetto</a>
     @forelse ($projects as $proj)
     <a href="{{url('admin/projects/show' , $proj->id)}}">
         <div class="col rounded p-4 bg-primary m-5 text-light">
@@ -21,7 +21,7 @@
         </div>
     </a>
     @empty
-    <h1>Al Momento non ho progetti da mostrare</h1>
+    <h1>Al Momento non ho progetti da mostrare crea il primo  :  <a href="{{route('admin.projects.create')}}" class="btn btn-primary"> crea progetto</a></h1>
     @endforelse
     
     @endsection

@@ -25,6 +25,8 @@ Route::middleware('auth')->prefix('admin/projects')->name('admin.projects.')->gr
     Route::get('/show/{project}', [AdminProjectController::class , 'show'])->name('show');
     Route::get('/edit/{project}/edit',[AdminProjectController::class, 'edit'])->name('edit');
     Route::PUT('/update/{project}',[AdminProjectController::class, 'update'])->name('update');
+    Route::post('/',[AdminProjectController::class, 'store'])->name('store');
+    Route::get('/create',[AdminProjectController::class, 'create'])->name('create');
 });
     
 

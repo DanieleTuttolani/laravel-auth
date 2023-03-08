@@ -17,6 +17,9 @@ class ProjectController extends Controller
 
         return view('admin.projects.show', compact('project'));
     }
+    public function create(){
+        return view('admin.projects.create');
+    }
 
     public function edit(Project $project){
         return view('admin.projects.edit' , compact('project'));
@@ -27,5 +30,14 @@ class ProjectController extends Controller
         $data = $request->all();
         $project->update($data);
         return to_route('admin.projects.show', compact('project'));
+    }
+    public function store(Request $request){
+        $data = $request->all();
+
+        $new_proj = new Project();
+        $new_proj->fill($data);
+        $new_proj->save();
+
+        return to_route('admin.projects.index', compact('new_proj'));
     }
 }
