@@ -27,6 +27,7 @@ Route::middleware('auth')->prefix('admin/projects')->name('admin.projects.')->gr
     Route::PUT('/update/{project}',[AdminProjectController::class, 'update'])->name('update');
     Route::post('/',[AdminProjectController::class, 'store'])->name('store');
     Route::get('/create',[AdminProjectController::class, 'create'])->name('create');
+    Route::delete('/{project}',[AdminProjectController::class , 'destroy'])->name('destroy');
 });
     
 

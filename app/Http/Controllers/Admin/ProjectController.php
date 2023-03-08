@@ -40,4 +40,8 @@ class ProjectController extends Controller
 
         return to_route('admin.projects.index', compact('new_proj'));
     }
+    public function destroy(Project $project){
+        $project->delete();
+        return to_route('admin.projects.index');
+    }
 }

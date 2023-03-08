@@ -27,6 +27,11 @@
             {{-- edit --}}
             <a href="{{route('admin.projects.edit', $project->id)}}" class="btn btn-secondary">Modifica</a>
             {{-- delete --}}
+            <form action="{{route('admin.projects.destroy' , $project->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-warning">Elimina</button>
+            </form>
         </div>
     </div>
 </div>
