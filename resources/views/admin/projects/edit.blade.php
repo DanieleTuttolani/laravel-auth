@@ -1,0 +1,61 @@
+@extends('layouts.app')
+
+@section('content')
+<h1>Modifica</h1>
+<div class="my-container container">
+    <div class="">
+        <form action="{{route('admin.projects.update' , $project->id)}}" method="post">
+            @method('PUT')
+            @csrf
+            {{-- title --}}
+            <div class="row g-3 align-items-center my-3 ">
+                <div class="col-auto">
+                  <label for="input-title" class="col-form-label">Titolo</label>
+                </div>
+                <div class="col">
+                  <input type="text" id="input-title" class="form-control" value="{{$project->title}}" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+              {{-- descrzione --}}
+              <div class="row g-3 align-items-center my-3">
+                <div class="col-auto">
+                  <label for="input-title" class="col-form-label">descrizione</label>
+                </div>
+                <div class="col">
+                  <textarea type="text" id="input-title" class="form-control"aria-describedby="passwordHelpInline">{{$project->description}}</textarea>
+                </div>
+              </div>
+              {{-- link git --}}
+              <div class="row g-3 align-items-center my-3">
+                <div class="col-auto">
+                  <label for="input-title" class="col-form-label">Link Github</label>
+                </div>
+                <div class="col">
+                  <input type="text" id="input-title" class="form-control" value="{{$project->proj_link}}" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+              {{--img  --}}
+              <div class="row g-3 align-items-center my-3">
+                <div class="col-auto">
+                  <label for="input-title" class="col-form-label">Url immagini</label>
+                </div>
+                <div class="col">
+                  <input type="text" id="input-title" class="form-control" value="{{$project->img}}" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+              {{-- collab --}}
+              <div class="row g-3 align-items-center my-3">
+                <div class="col-auto">
+                  <label for="input-title" class="col-form-label">Collaboratori</label>
+                </div>
+                <div class="col">
+                  <input type="text" id="input-title" class="form-control" value="{{$project->collab}}" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+
+              <button class="btn btn-success">invia</button>
+        </form>
+        
+    </div>
+</div>
+@endsection
