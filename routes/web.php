@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::middleware('auth')->prefix('admin/projects')->name('admin.projects.')->group(function(){
     Route::get('/index', [AdminProjectController::class , 'index'])->name('index');
     Route::get('/show/{project}', [AdminProjectController::class , 'show'])->name('show');
-
+    Route::get('/edit/{project}/edit',[AdminProjectController::class, 'edit'])->name('edit');
 });
     
 

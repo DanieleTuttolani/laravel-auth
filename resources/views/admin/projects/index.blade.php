@@ -16,7 +16,7 @@
             </ul>
             <div class="text-center">
                 <i class="fa-solid fa-hand-point-up fa-bounce fs-2"></i>
-                <h2>Clicca per editare</h2>
+                <h2>Clicca per visualizzare</h2>
             </div>
         </div>
     </a>
