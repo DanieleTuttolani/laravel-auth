@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="my-bgc vh-100 p-5">
-    <div class="mx-auto  bg-secondary text-light p-3 rounded" style="max-width: 700px">
+    <div class="my-container mx-auto  bg-secondary text-light p-3 rounded" style="max-width: 700px">
         <div class="col">
             <p>
                 <strong>Nome: {{$project->title}}</strong>
