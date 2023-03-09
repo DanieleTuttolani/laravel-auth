@@ -15,11 +15,11 @@
                 <strong>Link github: {{$project->proj_link}}</strong>
             </p>
             <p>
-                <strong>Collaboratori: {{$project->Collaboratori}}</strong>
+                <strong>Collaboratori: {{$project->collab}}</strong>
             </p>
         </div>
         <div class="col">
-            <img  class="img-fluid rounded" src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ" alt="">
+            <img  class="img-fluid rounded" src="{{asset('storage/'.$project->img)}}" alt="project pic">
         </div>
         <div class="btn-wrapper p-4">
             {{-- go back --}}

@@ -3,7 +3,7 @@
 <h1>Crea</h1>
 <div class="my-container container">
     <div class="">
-        <form action="{{route('admin.projects.store')}}" method="POST">
+        <form action="{{route('admin.projects.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             {{-- title --}}
             <div class="row g-3 align-items-center my-3 ">
@@ -35,10 +35,10 @@
               {{--img  --}}
               <div class="row g-3 align-items-center my-3">
                 <div class="col-auto">
-                  <label for="img" class="col-form-label">Url immagini</label>
+                  <label for="img" class="col-form-label">File img</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="img" name='img' class="form-control" value="" aria-describedby="passwordHelpInline">
+                  <input type="file" id="img" name='img' class="form-control"aria-describedby="passwordHelpInline">
                 </div>
               </div>
               {{-- collab --}}

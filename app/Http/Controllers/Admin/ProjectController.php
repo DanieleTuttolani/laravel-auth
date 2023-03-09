@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Project;
 class ProjectController extends Controller
 {
@@ -33,9 +34,12 @@ class ProjectController extends Controller
     }
     public function store(Request $request){
         $data = $request->all();
-
+        $img_path = Storage::put('uploads', $data['img']);
         $new_proj = new Project();
+
+
         $new_proj->fill($data);
+        $new_proj->img = $img_path;
         $new_proj->save();
 
         return to_route('admin.projects.index', compact('new_proj'));
