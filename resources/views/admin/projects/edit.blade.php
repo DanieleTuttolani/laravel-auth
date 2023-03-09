@@ -4,7 +4,7 @@
 <h1>Modifica</h1>
 <div class="my-container container">
     <div class="">
-        <form action="{{route('admin.projects.update' , $project->id)}}" method="POST">
+        <form action="{{route('admin.projects.update' , $project->id)}}" method="POST" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             {{-- title --}}
@@ -37,10 +37,10 @@
               {{--img  --}}
               <div class="row g-3 align-items-center my-3">
                 <div class="col-auto">
-                  <label for="input-title" class="col-form-label">Url immagini</label>
+                  <label for="input-title" class="col-form-label">File immagini</label>
                 </div>
                 <div class="col">
-                  <input type="text" id="img" name="img" class="form-control" value="{{$project->img}}" aria-describedby="passwordHelpInline">
+                  <input type="file" id="img" name="img" class="form-control" value="{{$project->img}}" aria-describedby="passwordHelpInline">
                 </div>
               </div>
               {{-- collab --}}
